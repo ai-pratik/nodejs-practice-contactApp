@@ -1,0 +1,84 @@
+/* Reset some default styling */
+body, ul {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Styling for the contact list container */
+.contact-list-container {
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+/* Styling for each contact item */
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f7f7f7;
+    max-width: 300px; /* Adjust the maximum width as needed */
+}
+
+.contact .details {
+    display: flex;
+    align-items: center;
+}
+
+.contact p {
+    margin: 0;
+    padding: 0;
+    margin-right: 10px; /* Add spacing between name and phone */
+}
+
+/* Styling for the delete button */
+.delete-btn {
+    margin-left: 10px;
+}
+
+.delete-btn a {
+    text-decoration: none;
+    color: red;
+    transition: color 0.3s ease;
+}
+
+.delete-btn a:hover {
+    color: darkred;
+}
+
+/* Styling for form layout */
+#form-layout {
+    margin: 20px;
+    max-width: 300px;
+}
+
+#form-layout input[type="text"],
+#form-layout input[type="number"] {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#form-layout button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#form-layout button:hover {
+    background-color: #0056b3;
+}

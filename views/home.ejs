@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=title%>
+    </title>
+    <link rel="stylesheet" href="/home.css">
+    <script src="https://kit.fontawesome.com/1ab81e80d9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1 class="heading"><i class="fas fa-address-book"></i> CONTACT APP</h1>
+    <div class="contact-list-container">
+    <ul>
+        <% for(let i of contact_list){%>
+            <li class="contact">
+                <div class="details">
+                    <p><%=i.name%></p> 
+                    <p><%=i.phone%></p>
+                </div>
+                <div class="delete-btn">
+                    <a href="/delete-contact/?id=<%=i._id%>">
+                        <i class="fas fa-user-minus">
+
+                        </i>
+                    </a>
+                </div>
+               
+            </li>
+        <%}%>
+    </ul>
+</div>
+<form id="form-layout" action="/create-contact" method="post">
+    <input type="text" name="name" placeholder="Enter Your name">
+    <input type="number" name="phone" placeholder="Enter your PHONE">
+
+    <button type="submit">ADD Contact</button>
+
+</form>
+<script type="text/javascript" src="/home.js"></script>
+</body>
+</html>
